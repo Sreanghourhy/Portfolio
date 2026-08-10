@@ -4,8 +4,7 @@ function Footer() {
   return (
     <section id="footer" className={styles.container}>
       <p>
-        &copy; Hy Sreanghour. <br />
-        
+        &copy; {new Date().getFullYear()} Hy Sreanghour. Designed &amp; built with care.
       </p>
     </section>
   );

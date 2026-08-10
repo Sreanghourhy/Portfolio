@@ -4,14 +4,18 @@ import Footer from './sections/Footer/Footer';
 import Hero from './sections/Hero/Hero';
 import Projects from './sections/Projects/Projects';
 import Skills from './sections/Skills/Skills';
+import Navigation from './sections/Navigation/Navigation';
 
 function App() {
   return (
     <>
-      <Hero />
-      <Projects />
-      <Skills />
-      <Contact />
+      <Navigation />
+      <main>
+        <Hero />
+        <Projects />
+        <Skills />
+        <Contact />
+      </main>
       <Footer />
     </>
   );

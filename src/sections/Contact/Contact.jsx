@@ -1,40 +1,19 @@
 import styles from './ContactStyles.module.css';
-import VolunteerCard from '../../common/VolunteerCard';
-import volunteer1 from '../../assets/Volunteer/ATC.jpg';
 
-
-const volunteerProjects = [
-  // {
-  //   id: 1,
-  //   title: "Air Tech Compertition",
-  //   date: "7/2024 - 12/2024",
-  //   description: " skills in robotics and engineering.",
-  //   image: volunteer1,
-  //   // link: "https://github.com/Sreanghourhy/Final_Project_Year2_Term3",
-  //   tech: ["PHP", "MYSQL", "HTML", "CSS"]
-  // },
-];
 function Contact() {
-  // return (
-  //   <section id="volunteer" className={styles.container}>
-  //     <h1 className="sectionTitle">Volunteer</h1>
-  //     <div className={styles.projectsContainer}>
-  //       {volunteerProjects.map((project) => (
-  //         <VolunteerCard
-  //           key={project.id}
-  //           src={project.image}
-  //           link={project.link}
-  //           h3={project.title}
-  //           h2={project.date}
-  //           p={project.description}
-  //           tech={project.tech}
-  //         />
-  //       ))}
-  //     </div>
-  //   </section>
-  // );
+  return (
+    <section id="contact" className={styles.container}>
+      <p className={styles.eyebrow}>Let&apos;s work together</p>
+      <h1>Have a project in mind?</h1>
+      <p className={styles.description}>
+        I&apos;m open to developer opportunities, collaborations, and projects
+        where I can build useful experiences and grow with a great team.
+      </p>
+      <a href="https://www.linkedin.com/in/hy-sreanghour-3b3829320/" target="_blank" rel="noreferrer">
+        Connect on LinkedIn <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+  );
 }
 
-
 export default Contact;
-

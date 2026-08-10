@@ -1,100 +1,157 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  min-height: 100svh;
+  align-items: center;
+  gap: 36px;
+  padding: 110px 0 50px;
   text-align: center;
-  height: 115dvh;
-  /* min-height: 500px; */
-
-  .hero {
-    max-width: 200px;
-  }
-
-  span {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-
-    a {
-      margin: 0;
-
-      img {
-        width: 30px;
-      }
-    }
-  }
-
-  a {
-    width: fit-content;
-    align-self: center;
-  }
-
-  button {
-    background-color: var(--btn-color);
-    color: var(--btn-text-color);
-    border: none;
-    border-radius: 20px;
-    width: 126px;
-    height: 50px;
-    font-size: 20px;
-    font-weight: bold;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
-  }
-
-  button:hover {
-    transform: scale(1.05);
-  }
-
-  button:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-  }
 }
 
 .colorModeContainer {
   position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.hero {
+  display: block;
+  width: min(72vw, 300px);
+  aspect-ratio: 1;
+  border: 8px solid var(--surface-color);
+  border-radius: 42% 58% 55% 45% / 52% 42% 58% 48%;
+  object-fit: cover;
+  box-shadow: var(--shadow-lg);
 }
 
 .colorMode {
   position: absolute;
-  right: 0;
-  width: 25px;
-}
-
-.colorMode:hover {
+  top: 8px;
+  right: 4px;
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  background: var(--surface-color);
+  box-shadow: var(--shadow-sm);
   cursor: pointer;
 }
 
-.description {
-  max-width: 50ch;
+.colorMode img {
+  display: block;
+  width: 20px;
+  height: 20px;
 }
 
 .info {
   display: flex;
+  align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
+}
+
+.eyebrow {
+  color: var(--accent-color);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.info h2 {
+  max-width: 660px;
+  color: var(--muted-text-color);
+  font-family: 'Roboto Mono', monospace;
+  font-size: clamp(17px, 3vw, 23px);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.socials {
+  display: flex;
+  gap: 14px;
+}
+
+.socials a {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--surface-color);
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.socials a:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.socials img {
+  width: 22px;
+}
+
+.description {
+  max-width: 58ch;
+  color: var(--muted-text-color);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.primaryButton,
+.secondaryButton {
+  padding: 13px 20px;
+  border: 1px solid var(--btn-color);
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.primaryButton {
+  background: var(--btn-color);
+  color: var(--btn-text-color);
+}
+
+.secondaryButton {
+  color: var(--accent-color);
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform: translateY(-3px);
+}
+
+.secondaryButton:hover {
+  background: var(--accent-soft);
 }
 
 @media (width >= 800px) {
   .container {
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-evenly;
-
-    .hero {
-      max-width: 350px;
-      width: 350px;
-    }
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 70px;
+    text-align: left;
   }
-}
 
-@media (width >= 1400px) {
-  .container {
-    .hero {
-      max-width: 400px;
-      width: 400px;
-    }
+  .colorModeContainer {
+    margin: 0;
+  }
+
+  .hero {
+    width: min(32vw, 390px);
+  }
+
+  .info {
+    align-items: flex-start;
+  }
+
+  .actions {
+    justify-content: flex-start;
   }
 }

@@ -24,34 +24,38 @@ function Hero() {
           className={styles.hero}
           alt="Profile picture of Hy Sreanghour"
         />
-        <img
+        <button
           className={styles.colorMode}
-          src={themeIcon}
-          alt="Color mode icon"
+          type="button"
+          aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
           onClick={toggleTheme}
-        />
+        >
+          <img src={themeIcon} alt="" aria-hidden="true" />
+        </button>
       </div>
       <div className={styles.info}>
+        <p className={styles.eyebrow}>Hello, I&apos;m</p>
         <h1>
           Hy Sreanghour
-          <br />
-          ヒースレンホール
         </h1>
-        <h2>Developer Intern</h2>
-        <span>
-          <a href="https://github.com/dashboard" target="_blank">
+        <h2>Full-stack developer building thoughtful digital experiences.</h2>
+        <span className={styles.socials}>
+          <a href="https://github.com/Sreanghourhy" target="_blank" rel="noreferrer" aria-label="Visit my GitHub profile">
             <img src={githubIcon} alt="Github icon" />
           </a>
-          <a href="https://www.linkedin.com/in/hy-sreanghour-3b3829320/" target="_blank">
+          <a href="https://www.linkedin.com/in/hy-sreanghour-3b3829320/" target="_blank" rel="noreferrer" aria-label="Visit my LinkedIn profile">
             <img src={linkedinIcon} alt="Linkedin icon" />
           </a>
         </span>
         <p className={styles.description}>
-        I am proficient in front-end and back-end development, with expertise in JavaScript, Vue.js, and Laravel. I am eager to contribute my skills and learn through a challenging internship opportunity. Please review my Resume for further details.
+          I build responsive web and mobile products with Vue.js, Laravel,
+          JavaScript, and Flutter. I enjoy turning ideas into useful,
+          accessible experiences and learning through every project.
         </p>
-        <a href={CV} download>
-          <button className="hover">Resume</button>
-        </a>
+        <div className={styles.actions}>
+          <a className={styles.primaryButton} href={CV} download>Download résumé</a>
+          <a className={styles.secondaryButton} href="#projects">View projects</a>
+        </div>
       </div>
     </section>
   );

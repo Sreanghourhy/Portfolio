@@ -1,49 +1,94 @@
 .container {
-  display: flex;
-  flex-direction: column;
+  scroll-margin-top: 100px;
+}
+
+.intro {
+  max-width: 55ch;
+  margin: 0 auto 36px;
+  color: var(--muted-text-color);
   text-align: center;
+}
 
-  span {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
+.groups {
+  display: grid;
+  gap: 18px;
+}
 
-  img {
-    width: 20px;
-  }
+.group {
+  padding: 24px;
+  border: 1px solid var(--border-color);
+  border-radius: 22px;
+  background: var(--surface-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.group h2 {
+  margin-bottom: 20px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  letter-spacing: 0.04em;
 }
 
 .skillList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.skillList > div {
   display: flex;
-  justify-content: space-evenly;
-  align-self: center;
-  flex-wrap: wrap;
-  row-gap: 40px;
-  max-width: 26ch;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 10px;
+  border-radius: 12px;
+  background: var(--background-color);
+  transition: transform 180ms ease, background-color 180ms ease;
 }
 
-hr {
-  width: 100px;
-  height: 1px;
-  border: none;
-  background-color: var(--text-color);
-  margin: 30px auto;
+.skillList > div:hover {
+  background: var(--accent-soft);
+  transform: translateY(-2px);
 }
 
-@media (width >= 800px) {
-  .skillList {
-    max-width: fit-content;
-    gap: 30px;
+.skillList img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
 
-    p {
-      font-size: 22px;
-      font-weight: 600;
-      transition: transform 0.2s ease;
-    }
+.skillList p {
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (width >= 700px) {
+  .groups {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  hr {
-    width: 300px;
+  .group:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .group:last-child .skillList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width >= 1000px) {
+  .groups {
+    grid-template-columns: 1fr 1fr 0.8fr;
+  }
+
+  .group:last-child {
+    grid-column: auto;
+  }
+
+  .group:last-child .skillList {
+    grid-template-columns: 1fr;
   }
 }

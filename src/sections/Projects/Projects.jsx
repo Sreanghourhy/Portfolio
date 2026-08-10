@@ -9,15 +9,15 @@ const projects = [
   {
     id: 1,
     title: "Plants Shop",
-    description: "School Project Y2T3",
+    description: "A complete online plant shop built as a second-year school project.",
     image: PlantShop,
     link: "https://github.com/Sreanghourhy/Final_Project_Year2_Term3",
-    tech: ["PHP", "MYSQL", "HTML", "CSS"]
+    tech: ["PHP", "MySQL", "HTML", "CSS"]
   },
   {
     id: 2,
     title: "Mobile App",
-    description: "School Project Y3T1",
+    description: "A cross-platform mobile application with Firebase services.",
     image: mobile_app,
     link: "https://github.com/Sreanghourhy/Final_Project_Mobile_App",
     tech: ["Dart", "Firebase", "Flutter"]
@@ -25,18 +25,18 @@ const projects = [
   {
     id: 3,
     title: "April Phnom Penh",
-    description: "Processing ",
+    description: "A modern point-of-sale platform for a collaborative client project.",
     image: POS_SYSTEM,
     link: "https://github.com/CollabStack/April-Backend",
-    tech: ["Laravel", "Nuxt3", "TailwindCSS"]
+    tech: ["Laravel", "Nuxt 3", "Tailwind CSS"]
   },
   {
     id: 4,
     title: "Calendar Events",
-    description: "Planing ",
+    description: "An event planning experience for organizing schedules and reminders.",
     image: calunder_event,
-    link: "#",
-    tech: ["React JS", "Laravel", "TailwindCSS"]
+    link: "https://github.com/Sreanghourhy",
+    tech: ["React", "Laravel", "Tailwind CSS"]
   }
 ];
 
@@ -44,6 +44,7 @@ function Projects() {
   return (
     <section id="projects" className={styles.container}>
       <h1 className="sectionTitle">Projects</h1>
+      <p className={styles.intro}>A selection of products I have designed and developed.</p>
       <div className={styles.projectsContainer}>
         {projects.map((project) => (
           <ProjectCard

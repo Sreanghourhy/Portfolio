@@ -1,0 +1,145 @@
+:root {
+  --background-color: #f7f8fc;
+  --surface-color: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.82);
+  --accent-color: #6558e8;
+  --accent-hover: #5145cd;
+  --accent-soft: #eeecff;
+  --btn-color: #6558e8;
+  --btn-text-color: #fff;
+  --text-color: #161526;
+  --muted-text-color: #656477;
+  --border-color: #e5e4ed;
+  --footer-text-color: #777587;
+  --shadow-sm: 0 8px 30px rgba(34, 29, 76, 0.08);
+  --shadow-lg: 0 24px 70px rgba(34, 29, 76, 0.12);
+}
+
+[data-theme='dark'] {
+  --background-color: #101018;
+  --surface-color: #1a1924;
+  --nav-bg: rgba(26, 25, 36, 0.82);
+  --accent-color: #a79cff;
+  --accent-hover: #bbb3ff;
+  --accent-soft: #292641;
+  --btn-color: #a79cff;
+  --btn-text-color: #17151f;
+  --text-color: #f7f5ff;
+  --muted-text-color: #aaa7b8;
+  --border-color: #302e3e;
+  --footer-text-color: #92909f;
+  --shadow-sm: 0 8px 30px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background:
+    radial-gradient(circle at 85% 8%, var(--accent-soft), transparent 28rem),
+    var(--background-color);
+  color: var(--text-color);
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+body,
+button,
+a {
+  font-family: 'Roboto Mono', monospace;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
+  width: min(calc(100% - 36px), 1120px);
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  color: var(--text-color);
+}
+
+h1,
+h2 {
+  font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+  font-size: clamp(34px, 7vw, 64px);
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: clamp(22px, 4vw, 34px);
+}
+
+h3 {
+  font-size: 19px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.sectionTitle {
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.sectionTitle::after {
+  display: block;
+  width: 42px;
+  height: 4px;
+  margin: 14px auto 0;
+  border-radius: 999px;
+  background: var(--accent-color);
+  content: '';
+}
+
+a:focus-visible,
+button:focus-visible,
+[role='button']:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 4px;
+}
+
+@media (width >= 800px) {
+  main {
+    gap: 150px;
+    width: min(calc(100% - 64px), 1120px);
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

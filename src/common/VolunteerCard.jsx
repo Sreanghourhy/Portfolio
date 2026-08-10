@@ -1,5 +1,3 @@
-import React from 'react';
-
 function VolunteerCard({ src, link, h3, h2 ,p }) {
   return (
     <a href={link} target="_blank">
