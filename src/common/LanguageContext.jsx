@@ -8,8 +8,8 @@ const translations = {
     hero: {
       name: 'ហុី ស្រៀងហួ',
       hello: 'សួស្តី ខ្ញុំឈ្មោះ',
-      title: 'អ្នកអភិវឌ្ឍកម្មវិធី Full-stack ដែលបង្កើតបទពិសោធន៍ឌីជីថលប្រកបដោយគំនិតច្នៃប្រឌិត។',
-      description: 'ខ្ញុំបង្កើតផលិតផលវេប និងទូរសព្ទដែលឆ្លើយតបបានល្អ ដោយប្រើ Vue.js, Laravel, JavaScript និង Flutter។ ខ្ញុំចូលចិត្តបម្លែងគំនិតទៅជាបទពិសោធន៍ដែលមានប្រយោជន៍ និងងាយស្រួលប្រើ។',
+      title: 'វិស្វករកម្មវិធីកម្រិតដំបូង ដែលចូលចិត្តបង្កើតបទពិសោធន៍ឌីជីថលប្រកបដោយគំនិតច្នៃប្រឌិត។',
+      description: 'ខ្ញុំជាវិស្វករកម្មវិធីកម្រិតដំបូង ដែលមានបទពិសោធន៍អភិវឌ្ឍវេប និងកម្មវិធីទូរសព្ទដោយប្រើ Vue.js, Laravel, JavaScript និង Flutter។ ខ្ញុំចូលចិត្តបម្លែងគំនិតទៅជាផលិតផលដែលមានប្រយោជន៍ និងងាយស្រួលប្រើ។',
       resume: 'ទាញយកប្រវត្តិរូប', gallery: 'មើលវិចិត្រសាល',
     },
     skills: {
@@ -29,8 +29,8 @@ const translations = {
     nav: { skills: 'Skills', gallery: 'Gallery', contact: 'Contact' },
     hero: {
       name: 'Hy Sreanghour',
-      hello: "Hello, I'm", title: 'Full-stack developer building thoughtful digital experiences.',
-      description: 'I build responsive web and mobile products with Vue.js, Laravel, JavaScript, and Flutter. I enjoy turning ideas into useful, accessible experiences and learning through every project.',
+      hello: "Hello, I'm", title: 'Junior Software Engineer building thoughtful digital experiences.',
+      description: "I'm a Junior Software Engineer with experience building responsive web and mobile products using Vue.js, Laravel, JavaScript, and Flutter. I enjoy turning ideas into useful, accessible experiences and growing through every project.",
       resume: 'Download résumé', gallery: 'View gallery',
     },
     skills: {
@@ -50,8 +50,8 @@ const translations = {
     nav: { skills: 'スキル', gallery: 'ギャラリー', contact: 'お問い合わせ' },
     hero: {
       name: 'ヒースレンホール',
-      hello: 'はじめまして、', title: '思いやりのあるデジタル体験を創るフルスタック開発者です。',
-      description: 'Vue.js、Laravel、JavaScript、Flutterを使って、レスポンシブなWeb・モバイル製品を開発しています。アイデアを便利で使いやすい体験に変えることが好きです。',
+      hello: 'はじめまして、', title: '使いやすいデジタル体験を創るジュニアソフトウェアエンジニアです。',
+      description: 'Vue.js、Laravel、JavaScript、Flutterを使ったレスポンシブなWeb・モバイル開発の経験があります。アイデアを便利で使いやすい製品に変え、プロジェクトを通して成長することが好きです。',
       resume: '履歴書をダウンロード', gallery: 'ギャラリーを見る',
     },
     skills: {
