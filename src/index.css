@@ -1,4 +1,14 @@
+@font-face {
+  font-family: 'Khmer OS Siemreap';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/KhmerOSSiemreap.ttf') format('truetype');
+}
+
 :root {
+  --body-font: 'Roboto Mono', monospace;
+  --heading-font: 'Rubik', sans-serif;
   --background-color: #f7f8fc;
   --surface-color: #ffffff;
   --nav-bg: rgba(255, 255, 255, 0.82);
@@ -13,6 +23,17 @@
   --footer-text-color: #777587;
   --shadow-sm: 0 8px 30px rgba(34, 29, 76, 0.08);
   --shadow-lg: 0 24px 70px rgba(34, 29, 76, 0.12);
+}
+
+html[lang='km'] {
+  --body-font: 'Khmer OS Siemreap', 'Noto Sans Khmer', sans-serif;
+  --heading-font: 'Khmer OS Siemreap', 'Noto Sans Khmer', sans-serif;
+  font-synthesis: none;
+}
+
+html[lang='ja'] {
+  --body-font: 'Noto Sans JP', sans-serif;
+  --heading-font: 'Noto Sans JP', sans-serif;
 }
 
 [data-theme='dark'] {
@@ -52,8 +73,9 @@ body {
 
 body,
 button,
-a {
-  font-family: 'Roboto Mono', monospace;
+a,
+select {
+  font-family: var(--body-font);
 }
 
 #root {
@@ -78,7 +100,35 @@ p {
 
 h1,
 h2 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--heading-font);
+}
+
+html[lang='km'] h1,
+html[lang='km'] h2,
+html[lang='km'] h3,
+html[lang='km'] p,
+html[lang='km'] a,
+html[lang='km'] button {
+  line-height: 1.7;
+}
+
+html[lang='km'] h1,
+html[lang='km'] h2,
+html[lang='km'] h3,
+html[lang='km'] p,
+html[lang='km'] a,
+html[lang='km'] button,
+html[lang='km'] select {
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+html[lang='km'] h1,
+html[lang='km'] h2,
+html[lang='km'] h3,
+html[lang='km'] button,
+html[lang='km'] a {
+  font-weight: 400;
 }
 
 h1 {

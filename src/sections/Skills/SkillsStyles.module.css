@@ -24,7 +24,7 @@
 
 .group h2 {
   margin-bottom: 20px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--body-font);
   font-size: 16px;
   letter-spacing: 0.04em;
 }
@@ -65,6 +65,123 @@
   white-space: nowrap;
 }
 
+.projectSection {
+  margin-top: 64px;
+}
+
+.projectHeading {
+  margin-bottom: 24px;
+}
+
+.projectHeading > p {
+  margin-bottom: 8px;
+  color: var(--accent-color);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.projectHeading h2 {
+  font-size: clamp(26px, 5vw, 42px);
+}
+
+.projectList {
+  border-top: 1px solid var(--border-color);
+}
+
+.projectList article {
+  padding: 26px 4px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.projectList article > a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.projectList :global(.project-heading) {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.projectList :global(.project-heading span) {
+  color: var(--accent-color);
+  font-size: 22px;
+}
+
+.projectList :global(.project-period) {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  border: 1px solid color-mix(in srgb, var(--accent-color) 24%, transparent);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-color);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.projectList h3 {
+  font-size: clamp(18px, 3vw, 23px);
+}
+
+.projectList :global(.project-role) {
+  margin: 8px 0;
+  color: var(--accent-color);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.projectList article > p,
+.projectList article > a > p:not(:global(.project-role)) {
+  max-width: 76ch;
+  color: var(--muted-text-color);
+  font-size: 13px;
+}
+
+.projectList :global(.tech-list) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.projectList :global(.tech-list) li {
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-color);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.projectList :global(.project-details) {
+  display: grid;
+  max-width: 82ch;
+  gap: 7px;
+  margin: 14px 0 0;
+  padding-left: 20px;
+  color: var(--muted-text-color);
+}
+
+.projectList :global(.project-details) li {
+  padding-left: 3px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.projectList :global(.project-details) li::marker {
+  color: var(--accent-color);
+}
+
 @media (width >= 700px) {
   .groups {
     grid-template-columns: repeat(2, 1fr);
@@ -76,6 +193,10 @@
 
   .group:last-child .skillList {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projectList article {
+    padding: 30px 12px;
   }
 }
 

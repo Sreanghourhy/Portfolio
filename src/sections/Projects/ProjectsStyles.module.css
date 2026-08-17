@@ -3,87 +3,83 @@
 }
 
 .intro {
-  margin-bottom: 36px;
+  margin: 0 auto 32px;
   color: var(--muted-text-color);
   text-align: center;
 }
 
-.projectsContainer {
+.gallery {
   display: grid;
-  gap: 22px;
+  max-width: 920px;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 14px;
 }
 
-.projectsContainer article {
+.galleryItem {
+  min-width: 0;
+  margin: 0;
+}
+
+.imageFrame {
+  display: grid;
   overflow: hidden;
+  aspect-ratio: 4 / 5;
+  place-items: center;
   border: 1px solid var(--border-color);
-  border-radius: 22px;
+  border-radius: 14px;
   background: var(--surface-color);
-  box-shadow: var(--shadow-sm);
-  transition: transform 200ms ease, box-shadow 200ms ease;
 }
 
-.projectsContainer article:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-6px);
-}
-
-.projectsContainer a {
-  display: block;
-  height: 100%;
-  color: inherit;
-  text-decoration: none;
-}
-
-.projectsContainer img {
-  display: block;
+.imageFrame img {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: 100%;
   object-fit: cover;
+  transition: transform 250ms ease;
 }
 
-.projectsContainer :global(.project-content) {
+.galleryItem:hover img {
+  transform: scale(1.025);
+}
+
+.imageFrame span {
   padding: 20px;
+  color: var(--muted-text-color);
+  font-size: 11px;
+  text-align: center;
 }
 
-.projectsContainer :global(.project-heading) {
+.galleryItem figcaption {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 10px;
+  padding: 10px 2px 0;
 }
 
-.projectsContainer :global(.project-heading span) {
-  color: var(--accent-color);
-  font-size: 24px;
-}
-
-.projectsContainer p {
-  min-height: 56px;
-  color: var(--muted-text-color);
-  font-size: 13px;
-}
-
-.projectsContainer ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin: 16px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.projectsContainer li {
-  padding: 6px 9px;
-  border-radius: 999px;
-  background: var(--accent-soft);
-  color: var(--accent-color);
-  font-size: 11px;
+.galleryItem figcaption span {
+  overflow: hidden;
+  font-size: 12px;
   font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.galleryItem figcaption small {
+  flex: none;
+  color: var(--muted-text-color);
+  font-size: 10px;
 }
 
 @media (width >= 700px) {
-  .projectsContainer {
-    grid-template-columns: repeat(2, 1fr);
+  .gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px 18px;
+  }
+}
+
+@media (width >= 1000px) {
+  .gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

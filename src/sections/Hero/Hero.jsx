@@ -8,9 +8,11 @@ import linkedinLight from '../../assets/linkedin-light.svg';
 import linkedinDark from '../../assets/linkedin-dark.svg';
 import CV from '../../assets/cv.pdf';
 import { useTheme } from '../../common/ThemeContext';
+import { useLanguage } from '../../common/LanguageContext';
 
 function Hero() {
   const { theme, toggleTheme } = useTheme();
+  const { text } = useLanguage();
 
   const themeIcon = theme === 'light' ? sun : moon;
   const githubIcon = theme === 'light' ? githubLight : githubDark;
@@ -34,11 +36,11 @@ function Hero() {
         </button>
       </div>
       <div className={styles.info}>
-        <p className={styles.eyebrow}>Hello, I&apos;m</p>
+        <p className={styles.eyebrow}>{text.hero.hello}</p>
         <h1>
-          Hy Sreanghour
+          {text.hero.name}
         </h1>
-        <h2>Full-stack developer building thoughtful digital experiences.</h2>
+        <h2>{text.hero.title}</h2>
         <span className={styles.socials}>
           <a href="https://github.com/Sreanghourhy" target="_blank" rel="noreferrer" aria-label="Visit my GitHub profile">
             <img src={githubIcon} alt="Github icon" />
@@ -48,13 +50,11 @@ function Hero() {
           </a>
         </span>
         <p className={styles.description}>
-          I build responsive web and mobile products with Vue.js, Laravel,
-          JavaScript, and Flutter. I enjoy turning ideas into useful,
-          accessible experiences and learning through every project.
+          {text.hero.description}
         </p>
         <div className={styles.actions}>
-          <a className={styles.primaryButton} href={CV} download>Download résumé</a>
-          <a className={styles.secondaryButton} href="#projects">View projects</a>
+          <a className={styles.primaryButton} href={CV} download="Hy-Sreanghour-Resume.pdf">{text.hero.resume}</a>
+          <a className={styles.secondaryButton} href="#achievements">{text.hero.gallery}</a>
         </div>
       </div>
     </section>

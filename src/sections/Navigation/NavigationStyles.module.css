@@ -18,7 +18,7 @@
 
 .brand {
   color: var(--text-color);
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--heading-font);
   font-size: 22px;
   text-decoration: none;
 }
@@ -29,12 +29,13 @@
 
 .header nav {
   display: flex;
+  align-items: center;
   gap: 16px;
 }
 
 .header nav a {
   color: var(--muted-text-color);
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--body-font);
   font-size: 12px;
   font-weight: 600;
   text-decoration: none;
@@ -44,6 +45,57 @@
 .header nav a:hover,
 .header nav a:focus-visible {
   color: var(--accent-color);
+}
+
+.languagePicker {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 7px;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-color);
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.languagePicker:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-1px);
+}
+
+.languagePicker span {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.languagePicker select {
+  width: 72px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text-color);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (width < 500px) {
+  .header nav {
+    gap: 8px;
+  }
+
+  .header nav a {
+    font-size: 10px;
+  }
+
+  .languagePicker {
+    padding-inline: 5px;
+  }
+
+  .languagePicker select {
+    width: 52px;
+  }
 }
 
 @media (width >= 600px) {

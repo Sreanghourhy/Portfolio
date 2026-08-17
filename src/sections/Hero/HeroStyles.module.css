@@ -60,7 +60,7 @@
 .info h2 {
   max-width: 660px;
   color: var(--muted-text-color);
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--body-font);
   font-size: clamp(17px, 3vw, 23px);
   font-weight: 500;
   line-height: 1.5;
