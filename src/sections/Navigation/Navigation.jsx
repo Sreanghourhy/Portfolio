@@ -21,8 +21,8 @@ function Navigation() {
             aria-label="Select website language"
           >
             <option value="km">ខ្មែរ</option>
-            <option value="en">English</option>
             <option value="ja">日本語</option>
+            <option value="en">English</option>
           </select>
         </label>
       </nav>
