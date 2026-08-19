@@ -2,9 +2,11 @@ import styles from './SkillsStyles.module.css';
 import SkillList from '../../common/SkillList';
 import ProjectCard from '../../common/ProjectCard';
 import HTML from '../../assets/list-skill-icon/html.svg';
+import CSS from '../../assets/list-skill-icon/css.svg';
 import Tailwind from '../../assets/list-skill-icon/tailwind.svg';
 import Laravel from '../../assets/list-skill-icon/laravel.svg';
 import Java from '../../assets/list-skill-icon/javascript.svg';
+import TypeScript from '../../assets/list-skill-icon/typescript.svg';
 import Nuxt from '../../assets/list-skill-icon/nuxt.svg';
 import React from '../../assets/list-skill-icon/react.svg';
 import Vue from '../../assets/list-skill-icon/vue.svg';
@@ -13,28 +15,41 @@ import Dart from '../../assets/list-skill-icon/dart.svg';
 import Flutter from '../../assets/list-skill-icon/flutter.svg';
 import Figma from '../../assets/list-skill-icon/figma.svg';
 import githubIcon from '../../assets/list-skill-icon/github.svg';
+import Git from '../../assets/list-skill-icon/git.svg';
+import Gitea from '../../assets/list-skill-icon/gitea.svg';
+import Database from '../../assets/list-skill-icon/database.svg';
 import API from '../../assets/list-skill-icon/api.svg';
 import Firebase from '../../assets/list-skill-icon/firebase.svg';
 import { useLanguage } from '../../common/LanguageContext';
 
 const skillGroups = [
   {
-    title: 'Frontend',
+    title: 'Core Technologies',
     skills: [
-      [HTML, 'HTML'], [Java, 'JavaScript'], [Vue, 'Vue.js'],
-      [Nuxt, 'Nuxt'], [React, 'React'], [Tailwind, 'Tailwind CSS'],
+      [HTML, 'HTML'], [CSS, 'CSS'], [Java, 'JavaScript'],
+      [TypeScript, 'TypeScript'], [PHP, 'PHP'], [Dart, 'Dart'],
     ],
   },
   {
-    title: 'Backend & mobile',
+    title: 'Frameworks & Libraries',
     skills: [
-      [PHP, 'PHP'], [Laravel, 'Laravel'], [Dart, 'Dart'],
-      [Flutter, 'Flutter'], [Firebase, 'Firebase'], [API, 'REST APIs'],
+      [React, 'React'], [Vue, 'Vue.js'], [Nuxt, 'Nuxt'],
+      [Laravel, 'Laravel'], [Flutter, 'Flutter'], [Tailwind, 'Tailwind CSS'],
     ],
   },
   {
-    title: 'Design & workflow',
-    skills: [[Figma, 'Figma'], [githubIcon, 'Git & GitHub']],
+    title: 'Databases & Backend Services',
+    skills: [
+      [Database, 'SQL'], [Database, 'PostgreSQL'],
+      [Firebase, 'Firebase'], [API, 'REST APIs'],
+    ],
+  },
+  {
+    title: 'Design & Development Tools',
+    skills: [
+      [Figma, 'Figma'], [Git, 'Git'],
+      [githubIcon, 'GitHub'], [Gitea, 'Gitea'],
+    ],
   },
 ];
 
@@ -113,7 +128,12 @@ const projects = [
 
 function Skills() {
   const { text } = useLanguage();
-  const groupTitles = [text.skills.frontend, text.skills.backend, text.skills.design];
+  const groupTitles = [
+    text.skills.core,
+    text.skills.frameworks,
+    text.skills.services,
+    text.skills.design,
+  ];
 
   return (
     <section id="skills" className={styles.container}>

@@ -187,14 +187,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .group:last-child {
-    grid-column: 1 / -1;
-  }
-
-  .group:last-child .skillList {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .projectList article {
     padding: 30px 12px;
   }
@@ -202,14 +194,6 @@
 
 @media (width >= 1000px) {
   .groups {
-    grid-template-columns: 1fr 1fr 0.8fr;
-  }
-
-  .group:last-child {
-    grid-column: auto;
-  }
-
-  .group:last-child .skillList {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

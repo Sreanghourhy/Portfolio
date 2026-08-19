@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Gitea">
+  <rect width="40" height="40" x="4" y="4" rx="11" fill="#609926"/>
+  <path fill="#fff" d="M31.7 14.3c-3.5 0-6.2 2.1-7.7 4.9-1.5-2.8-4.2-4.9-7.7-4.9-5.1 0-8.3 4-8.3 8.9 0 7.6 7.8 11.4 16 16.5 8.2-5.1 16-8.9 16-16.5 0-4.9-3.2-8.9-8.3-8.9Z" opacity=".22"/>
+  <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 18h10a6 6 0 0 1 0 12h-2m-8-12v12m0-6h8m0 0v10"/>
+  <circle cx="15" cy="18" r="2.5" fill="#fff"/><circle cx="15" cy="30" r="2.5" fill="#fff"/><circle cx="23" cy="24" r="2.5" fill="#fff"/><circle cx="23" cy="34" r="2.5" fill="#fff"/>
+</svg>

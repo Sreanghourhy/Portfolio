@@ -14,7 +14,8 @@ const translations = {
     },
     skills: {
       title: 'ជំនាញ', intro: 'បច្ចេកវិទ្យា និងឧបករណ៍ដែលខ្ញុំប្រើ ដើម្បីបម្លែងគំនិតទៅជាផលិតផល។',
-      frontend: 'ផ្នែកខាងមុខ', backend: 'ផ្នែកខាងក្រោយ និងទូរសព្ទ', design: 'ការរចនា និងលំហូរការងារ',
+      core: 'បច្ចេកវិទ្យាមូលដ្ឋាន', frameworks: 'ក្របខណ្ឌ និងបណ្ណាល័យ',
+      services: 'មូលដ្ឋានទិន្នន័យ និងសេវាកម្ម Backend', design: 'ឧបករណ៍រចនា និងអភិវឌ្ឍន៍',
       selected: 'ការងារជ្រើសរើស', projects: 'គម្រោង និងបទពិសោធន៍',
     },
     gallery: { title: 'សមិទ្ធផល និងការងារស្ម័គ្រចិត្ត', intro: 'រូបភាពពីការប្រកួត ការងារសហគមន៍ និងការងារស្ម័គ្រចិត្ត។' },
@@ -35,7 +36,8 @@ const translations = {
     },
     skills: {
       title: 'Skills', intro: 'The technologies and tools I use to take products from idea to launch.',
-      frontend: 'Frontend', backend: 'Backend & mobile', design: 'Design & workflow',
+      core: 'Core Technologies', frameworks: 'Frameworks & Libraries',
+      services: 'Databases & Backend Services', design: 'Design & Development Tools',
       selected: 'Selected work', projects: 'Projects & Experience',
     },
     gallery: { title: 'Achievements & Volunteering', intro: 'Moments from competitions, community work, and volunteering.' },
@@ -56,7 +58,8 @@ const translations = {
     },
     skills: {
       title: 'スキル', intro: 'アイデアから製品の公開までに使用する技術とツールです。',
-      frontend: 'フロントエンド', backend: 'バックエンド・モバイル', design: 'デザイン・ワークフロー',
+      core: 'コア技術', frameworks: 'フレームワーク・ライブラリ',
+      services: 'データベース・バックエンドサービス', design: 'デザイン・開発ツール',
       selected: '主な実績', projects: 'プロジェクト・経験',
     },
     gallery: { title: '実績・ボランティア', intro: 'コンテスト、地域活動、ボランティアでの思い出です。' },

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Database">
+  <ellipse cx="24" cy="10" rx="17" ry="7" fill="#336791"/>
+  <path fill="#336791" d="M7 10v10c0 3.9 7.6 7 17 7s17-3.1 17-7V10c0 3.9-7.6 7-17 7S7 13.9 7 10Zm0 14v10c0 3.9 7.6 7 17 7s17-3.1 17-7V24c0 3.9-7.6 7-17 7S7 27.9 7 24Z"/>
+  <path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2" d="M11 20c2.7 2 7.4 3.3 13 3.3S34.3 22 37 20M11 34c2.7 2 7.4 3.3 13 3.3S34.3 36 37 34" opacity=".75"/>
+</svg>
